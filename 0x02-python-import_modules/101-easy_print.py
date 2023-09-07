@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-import os
-os.write(1, b"#pythoniscool\n")
+__builtins__.getattr(__builtins__, 'print')('#pythoniscool\n', end='')
