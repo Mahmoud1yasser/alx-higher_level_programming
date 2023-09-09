@@ -4,5 +4,5 @@ def max_integer(my_list=[]):
         return (None)
     else:
         new = list.sort(my_list)
-        l = list.pop(my_list)
-        return (l)
+        last = list.pop(my_list)
+        return (last)
