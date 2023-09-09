@@ -3,6 +3,5 @@ def delete_at(my_list=[], idx=0):
     if idx < 0:
         return (my_list)
     else:
-        new =list.copy(my_list)
-        del new[idx]
-        return (new)
+        del my_list[idx]
+        return (my_list)
