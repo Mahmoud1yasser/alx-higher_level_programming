@@ -12,4 +12,4 @@ def roman_to_int(roman_string):
                 add -= dic[roman_string[i]]
             else:
                 add += dic[roman_string[i]]
-    return (add)
+    return (int(add))
