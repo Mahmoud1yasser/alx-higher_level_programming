@@ -4,6 +4,10 @@ def best_score(a_dictionary):
         return (None)
     else:
         n = []
-        for new in a_dictionary:
-            n.append(new)
-    return max(n)
+        f = []
+        for k, v in a_dictionary.items():
+            n.append(k)
+            f.append(v)
+            po = max(f)
+            q = f.index(po)
+        return (n[q])
