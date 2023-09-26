@@ -4,7 +4,7 @@
 
 class Square:
     '''Creates an empty Square type'''
-    def __size(self, size=None):
+    def __init__(self, size=None):
         """private attribute that defines the size of square.
 
         Args:
@@ -12,4 +12,4 @@ class Square:
             size: entered size of square
 
         """
-        self.size = size
+        self.__size = size
