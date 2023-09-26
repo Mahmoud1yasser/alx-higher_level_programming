@@ -56,6 +56,7 @@ class Square:
                     print('#' * self.size)
         if self.__size == 0:
             print()
+
     @property
     def position(self):
         """ define position to be retrived
