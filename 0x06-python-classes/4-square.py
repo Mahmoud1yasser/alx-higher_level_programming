@@ -16,7 +16,7 @@ class Square:
 
     @property
     def size(self):
-        '''Defines the size of square and returns its value
+        '''Defines the size of square
 
         Returns: attribute value
 
@@ -33,7 +33,6 @@ class Square:
 
         """
         self.__size = value
-        elf.__size = value
         if type(value) is not int:
             raise TypeError('size must be an integer')
         if value < 0:
