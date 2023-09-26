@@ -18,7 +18,7 @@ class Square:
         if size < 0:
             raise ValueError('size must be >= 0')
 
-        def size(self, value):
+    def size(self, value):
         """sets the size to a certain value.
 
         Args:
@@ -26,7 +26,7 @@ class Square:
             value: size ti be setted
 
         """
-            self.__size = value
+        self.__size = value
 
 
     def area(self):
