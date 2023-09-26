@@ -13,7 +13,10 @@ class Square:
 
         """
         self.__size = size
-        self.__position = position
+        try:
+            self.position = position
+        except TypeError as typ:
+            print(typ)
 
     @property
     def size(self):
