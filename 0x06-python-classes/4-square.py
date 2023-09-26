@@ -17,7 +17,11 @@ class Square:
             raise TypeError('size must be an integer')
         if size < 0:
             raise ValueError('size must be >= 0')
-
+    @property
+    def size(self):
+        '''Defines the size of square and returns its value'''
+        return self.__size
+    @size.setter
     def size(self, value):
         """sets the size to a certain value.
 
@@ -27,7 +31,11 @@ class Square:
 
         """
         self.__size = value
-
+        elf.__size = value
+        if type(value) is not int:
+            raise TypeError('size must be an integer')
+        if value < 0:
+            raise ValueError('size must be >= 0')
 
     def area(self):
         '''Defines the area of a square.
