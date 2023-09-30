@@ -40,6 +40,15 @@ def matrix_divided(matrix, div):
     Returns: new matrix for the calculation.
     """
     result = []
+    listError = 'matrix must be a matrix (list of lists) of integers/floats'
+    # Check if matrix is a list
+    if type(matrix) is not list:
+        raise TypeError(listError)
+
+    # Check if rows in matrix is list
+    for rows in matrix:
+        if type(rows) is not list:
+            raise TypeError(listError)
     if type(div) is int or type(div) is float:
         if div == 0:
             raise ZeroDivisionError('division by zero')
@@ -51,7 +60,7 @@ def matrix_divided(matrix, div):
                         result.append(divided_list)
                     return result
                 else:
-                    raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+                    raise TypeError(ListError)
             else:
                 raise TypeError('Each row of the matrix must have the same size')
     else:
