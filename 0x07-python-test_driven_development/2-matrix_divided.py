@@ -47,7 +47,7 @@ def matrix_divided(matrix, div):
             if check_row_sizes(matrix):
                 if check_list_types(matrix):
                     for sub_list in matrix:
-                        divided_list = [element / div for element in sub_list]
+                        divided_list = [round((element / div), 2) for element in sub_list]
                         result.append(divided_list)
                     return result
                 else:
