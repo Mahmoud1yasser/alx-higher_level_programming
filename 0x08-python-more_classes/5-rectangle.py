@@ -70,5 +70,6 @@ class Rectangle:
         else:
             perimeter = 2 * (self.width + self.height)
             return perimeter
+
     def __del__(self):
         print('Bye rectangle...')
