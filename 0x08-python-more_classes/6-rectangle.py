@@ -14,7 +14,7 @@ class Rectangle:
 
         self.width = width
         self.height = height
-        number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     def __str__(self):
         if self.height == 0 or self.width == 0:
@@ -76,4 +76,4 @@ class Rectangle:
 
     def __del__(self):
         print('Bye rectangle...')
-        number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
