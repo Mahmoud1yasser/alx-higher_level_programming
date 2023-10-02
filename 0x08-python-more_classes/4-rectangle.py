@@ -23,7 +23,7 @@ class Rectangle:
                 return '#' * self.width
 
     def __repr__(self):
-         return("Rectangle({}, {})".format(self.width, self.height))
+        return ("Rectangle({}, {})".format(self.width, self.height))
 
     @property
     def width(self):
