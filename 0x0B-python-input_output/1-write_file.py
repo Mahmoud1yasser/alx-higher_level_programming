@@ -7,6 +7,6 @@ and returns the number of characters written'''
 def write_file(filename="", text=""):
     '''function writes in a file with UTF8 formate
     Returns: number of charachters written'''
-    with open(filename, 'r+', encoding='UTF-8') as f:
+    with open(filename, 'w', encoding='UTF-8') as f:
         count = f.write(text)
         return count
