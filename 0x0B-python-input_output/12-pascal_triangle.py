@@ -6,18 +6,23 @@
 
 
 def pascal_triangle(n):
-    '''Returns: a list of lists of integers
-    representing the Pascal’s triangle of n'''
+    """returns list representing Pascal's triangle"""
+    pascal_triangle = []
+    previous = [1]
     if n <= 0:
-        return []
-
-    my_list_tri = []
-    for count in range(1, n):
-        row = [1]
-        if my_list_tri:
-            last_row = my_list_tri[-1]
-            for j in range(len(last_row) - 1):
-                row.append(last_row[j] + last_row[j + 1])
-        row.append(1)
-        my_list_tri.append(row)
-    return my_list_tri
+        return pascal_triangle
+    for row_number in range(n):
+        rowlist = []
+        if row_number == 0:
+            rowlist = [1]
+        else:
+            for i in range(row_number + 1):
+                if i == 0:
+                    rowlist.append(0 + previous[i])
+                elif i == (row_number):
+                    rowlist.append(previous[i - 1] + 0)
+                else:
+                    rowlist.append(previous[i - 1] + previous[i])
+        previous = rowlist
+        pascal_triangle.append(rowlist)
+    return pascal_triangle
