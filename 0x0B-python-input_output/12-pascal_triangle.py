@@ -8,11 +8,13 @@ def pascal_triangle(n):
     if n <= 0:
         return []
 
-    my_list = [[1]]
+    my_list_tri = []
     for count in range(1, n):
         row = [1]
-        for elem in range(1, count):
-            row.append(my_list[count - 1][elem - 1] + my_list[count - 1][elem])
+        if my_list_tri:
+            last_row = my_list_tri[-1]
+            for j in range(len(last_row) - 1):
+                row.append(last_row[j] + last_row[j + 1])
         row.append(1)
-        my_list.append(row)
-    return my_list
+        my_list_tri.append(row)
+    return my_list_tri
