@@ -47,7 +47,7 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("width must be > 0")
         else:
-            self.width = value
+            self.__width = value
 
     @property
     def height(self):
@@ -60,7 +60,7 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("height must be > 0")
         else:
-            self.height = value
+            self.__height = value
 
     @property
     def x(self):
@@ -94,6 +94,23 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
+        '''Display rectangle in shape of # '''
+        space = ' '
         character = '#'
         line = character * self.__width
-        print((line + '\n') * self.__height, end='')
+        print('\n' * self.__y, end='')
+        print(((space * self.__x) + (line + '\n')) * self.__height, end='')
+
+    def update(self, *args):
+        '''assigns an argument to each attribute'''
+        if args:
+            if len(args) >= 1:
+                self.id = args[0]
+            if len(args) >= 2:
+                self.width = args[1]
+            if len(args) >= 3:
+                self.height = args[2]
+            if len(args) >= 4:
+                self.x = args[3]
+            if len(args) >= 5:
+                self.y = args[4]
