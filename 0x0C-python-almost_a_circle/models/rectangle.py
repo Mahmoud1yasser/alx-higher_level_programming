@@ -32,6 +32,7 @@ class Rectangle(Base):
         self.__y = y
 
     def __str__(self):
+        '''Update the class Rectangle by overriding the __str__ method'''
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
                     self.id, self.__x, self.__y, self.__width, self.__height)
 
