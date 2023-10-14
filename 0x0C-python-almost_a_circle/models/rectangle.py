@@ -83,7 +83,13 @@ class Rectangle(Base):
         else:
             self.__y = value
 
-        def area(self):
-            '''calculates area of rectangle
-            Returns: value of area'''
-            return self.__width * self.__height
+    def area(self):
+        '''calculates area of rectangle
+        Returns: value of area'''
+        return self.__width * self.__height
+
+    def display(self):
+        character = '#'
+        line = character * self.__width
+        print((line + '\n') * self.__height, end='')
+
