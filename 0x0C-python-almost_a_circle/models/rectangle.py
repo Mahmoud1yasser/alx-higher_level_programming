@@ -101,7 +101,7 @@ class Rectangle(Base):
         print('\n' * self.__y, end='')
         print(((space * self.__x) + (line + '\n')) * self.__height, end='')
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         '''assigns an argument to each attribute'''
         if args:
             if len(args) >= 1:
@@ -114,3 +114,16 @@ class Rectangle(Base):
                 self.x = args[3]
             if len(args) >= 5:
                 self.y = args[4]
+        elif kwargs:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
+
+    def to_dictionary(self):
+        '''Rectangle instance to dictionary representation
+        Returns: the dictionary representation of a Rectangle
+        '''
+        dic = {'id': self.id, 'width': self.width, 'height': self.height,
+               'x': self.x, 'y': self.y}
+        return dic
+
