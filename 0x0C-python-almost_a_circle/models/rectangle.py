@@ -9,6 +9,7 @@ from models.base import Base
 class Rectangle(Base):
     '''a class to define a rectangle'''
     def __init__(self, width, height, x=0, y=0, id=None):
+        '''initiate new rectangle'''
         super().__init__(id)
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
@@ -38,10 +39,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """set the property of width"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        '''set the width attribute'''
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -51,10 +54,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """set the property of height"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        '''set the height attribute'''
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -64,10 +69,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """set the property of x"""
         return self.__x
 
     @x.setter
     def x(self, value):
+        '''set the x positional attribute'''
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         if value < 0:
@@ -77,10 +84,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """set the property of y"""
         return self.__y
 
     @y.setter
     def y(self, value):
+        '''set the y positional attribute'''
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         if value < 0:

@@ -10,6 +10,7 @@ class Square(Rectangle):
     '''Square is a special Rectangle,
     so it makes sense that Square inherits from Rectangle'''
     def __init__(self, size, x=0, y=0, id=None):
+        '''initiate new square'''
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
@@ -19,6 +20,7 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """set the property of size"""
         return self.width
 
     @size.setter

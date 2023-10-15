@@ -11,8 +11,9 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+        ''' initiate class'''
         if id is not None:
-            Base.id = id
+            self.id = id
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
@@ -20,7 +21,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         '''Dictionary to JSON string
-        Returns:returns the JSON string
+        Returns: the JSON string
         representation of list_dictionaries
         '''
         if list_dictionaries is None or len(list_dictionaries) == 0:
@@ -37,16 +38,6 @@ class Base:
         filename = "{}.json".format(cls.__name__)
         with open(filename, 'w') as json_file:
             json_file.write(json_string)
-
-    @classmethod
-    def create(cls, **dictionary):
-        '''class method that prints instances'''
-        if cls.__name__ == 'Rectangle':
-            dummy = cls(1, 1)
-        elif cls.__name__ == 'Square':
-            dummy = cls(1)
-        dummy.update(**dictionary)
-        return dummy
 
     @staticmethod
     def from_json_string(json_string):
