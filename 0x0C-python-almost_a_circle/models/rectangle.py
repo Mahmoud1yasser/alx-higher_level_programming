@@ -126,4 +126,3 @@ class Rectangle(Base):
         dic = {'id': self.id, 'width': self.width, 'height': self.height,
                'x': self.x, 'y': self.y}
         return dic
-

@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-#square.py
+# square.py
 '''class Square that inherits from Rectangle'''
 
 
 from models.rectangle import Rectangle
+
+
 class Square(Rectangle):
     '''Square is a special Rectangle,
     so it makes sense that Square inherits from Rectangle'''
@@ -39,9 +41,10 @@ class Square(Rectangle):
             for key, value in kwargs.items():
                 if hasattr(self, key):
                     setattr(self, key, value)
+
     def to_dictionary(self):
         '''Square instance to dictionary representation
         Returns: dictionary representation of a Square
         '''
-        dictio = {'id' : self.id, 'size' : self.width, 'x' : self.x, 'y' : self.y}
+        dictio = {'id': self.id, 'size': self.width, 'x': self.x, 'y': self.y}
         return dictio
