@@ -44,7 +44,7 @@ class TestBase(unittest.TestCase):
         Tests for pep8
         """
         p8 = pycodestyle.StyleGuide(quiet=True)
-        p = p8.check_files(['tests/test_base.py'])
+        p = p8.check_files(['tests/test_models/test_base.py'])
         self.assertEqual(p.total_errors, 0, "fix pep8")
 
     def test_docstring(self):
