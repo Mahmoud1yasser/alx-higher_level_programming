@@ -1,8 +1,11 @@
--- script that creates the database hbtn_0d_usa and the table states (in the database hbtn_0d_usa) on your MySQL server.
---    states description:
---        id INT unique, auto generated, can’t be null and is a primary key
---        name VARCHAR(256) can’t be null
+-- Create db 'hbtn_0d_usa'
+-- If db already exists, script should not fail
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
+
+-- Create table 'states' in db 'hbtn_0d_usa'
+-- id INT unique auto-generated not null and primary key
+-- name VARCHAR(256) not null
+-- If table already exists, script should not fail
 CREATE TABLE IF NOT EXISTS hbtn_0d_usa.states
 (
 	id INT UNIQUE AUTO_INCREMENT NOT NULL,
