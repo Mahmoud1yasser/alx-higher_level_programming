@@ -1,4 +1,4 @@
-- 'tv_shows' table contains only one record where title = Dexter
+-- 'tv_shows' table contains only one record where title = Dexter
 -- Each record should display tv_genres.name
 -- Results must be sorted in ascending order by genre name
 -- You can only use one SELECT statement
