@@ -1,14 +1,23 @@
 #!/usr/bin/node
-// JS to find the second largest number
-'use strict';
-(function secondBiggest (arg) {
-  const list = [];
-  if (process.argv.length < 4) {
-    console.log(0);
-  } else {
-    for (let count = 2; count < process.argv.length; count++) {
-      list.push(Number(process.argv[count]));
-    }
-    console.log(list.sort()[list.length - 2]);
+
+if (process.argv.length > 3) {
+  let numArray = [];
+  let j = 0;
+  for (let i = 2; i < process.argv.length; i++) {
+    numArray[j] = process.argv[i];
+    j++;
   }
-})();
+  let largest = numArray[0];
+  let nextLargest = numArray[1];
+  for (let i = 0; i < numArray.length; i++) {
+    if (numArray[i] > largest) {
+      nextLargest = largest;
+      largest = numArray[i];
+    } else if (numArray[i] > nextLargest && numArray[i] < largest) {
+      nextLargest = numArray[i];
+    }
+  }
+  console.log(nextLargest);
+} else {
+  console.log(0);
+}
