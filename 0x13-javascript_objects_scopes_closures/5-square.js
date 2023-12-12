@@ -31,10 +31,10 @@ class Rectangle {
   }
 }
 
-class extends square {
+class Square extends Rectangle {
   constructor (size) {
     super(size, size);
   }
 }
 }
-module.exports = square;
+module.exports = Square;
