@@ -1,6 +1,7 @@
 #!/usr/bin/node
 const newSquare = require('./5-square');
-lass Square extends newSquare {
+
+class Square extends newSquare {
   charPrint (c) {
     for (let count = 0; count < this.height; count++) {
       if (c === undefined) {
