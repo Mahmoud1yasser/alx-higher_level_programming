@@ -8,4 +8,5 @@ exports.nbOccurences = function (list, searchElement) {
       continue;
     }
   }
+  return (count);
 }
