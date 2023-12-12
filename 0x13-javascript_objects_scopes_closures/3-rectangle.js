@@ -11,6 +11,7 @@ class Rectangle {
       this.height = h;
     }
   }
+
   print() {
     let i;
     for (i = 0; i < this.height; i++) {
