@@ -16,7 +16,8 @@ def main():
     cur.execute(query)
     states = cur.fetchall()
     for state in states:
-        print(state)
+        if state[1][0] == 'N':
+            print(state)
     cur.close()
     db.close()
 
