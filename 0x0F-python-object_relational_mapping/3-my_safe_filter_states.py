@@ -17,7 +17,7 @@ def main():
     cur = db.cursor()
     query = """SELECT * FROM states
     WHERE name LIKE %s ORDER BY id ASC"""
-    cur.execute(query,(name,))
+    cur.execute(query, (name,))
     states = cur.fetchall()
     for state in states:
         if state[1] == name:
