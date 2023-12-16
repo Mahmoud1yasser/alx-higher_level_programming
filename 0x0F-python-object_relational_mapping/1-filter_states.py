@@ -16,7 +16,7 @@ def main():
     cur.execute(query)
     states = cur.fetchall()
     for state in states:
-        print (state)
+        print(state)
     cur.close()
     db.close()
 
