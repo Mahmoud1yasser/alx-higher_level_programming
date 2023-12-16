@@ -19,9 +19,7 @@ def main():
             ORDER by cities.id ASC"""
     cur.execute(query, (state_name,))
     cities = cur.fetchall()
-    for city in cities:
-        print("{}, ".format(city[1]), end='')
-    print("\n")
+    print(", ".join(city[1] for city in cities))
     cur.close()
     db.close()
 
