@@ -13,7 +13,7 @@ def main():
     db = MySQLdb.connect(host="localhost", port=3306,
                          user=username, passwd=password, db=database)
     cur = db.cursor()
-    query = """SELECT * FROM states 
+    query = """SELECT * FROM states
     WHERE name LIKE '{}'ORDER BY id ASC""".format(name)
     cur.execute(query)
     states = cur.fetchall()
